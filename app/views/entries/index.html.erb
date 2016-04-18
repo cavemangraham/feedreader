@@ -1,0 +1,10 @@
+<div class="container">
+  <% @entries.each do |entry| %>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <b><%= link_to entry.title, entry %></b> - <i> published <%= time_ago_in_words(entry.published) %> ago.</i><br>
+        <%= entry.summary %>
+      </div>
+    </div>
+  <% end %>
+</div>
