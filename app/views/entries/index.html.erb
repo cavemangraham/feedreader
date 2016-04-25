@@ -3,6 +3,8 @@
     <div class="panel panel-default">
       <div class="panel-body">
         <b><%= link_to entry.title, entry.url, :target => "_blank" %></b> - <i> published <%= time_ago_in_words(entry.published) %> ago.</i><br>
+        	<br>
+        	<%= entry.content %>
       </div>
     </div>
   <% end %>
