@@ -1,0 +1,14 @@
+<ion-view title="News">
+  <ion-content>
+     <div collection-repeat="feed_entry in feed_entries">
+        <div class="card item-text-wrap">
+          <div class="card-header">
+            <h2 style="font-size:14px;text-align:center;">{{feed_entry.title}} - {{feed_entry.published}}</h2>
+          </div>
+          <div class="card-content">
+            <p style="text-overflow:initial; white-space: normal; overflow: visible;">{{feed_entry.content}}</p>
+          </div>  
+        </div>
+      </div>
+  </ion-content>
+</ion-view>

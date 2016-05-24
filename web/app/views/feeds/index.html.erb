@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+  <% @feeds.each do |feed| %>
+      <b><%= link_to feed.title, feed.url, :target => "_blank" %></b> - <i> published <%= time_ago_in_words(feed.published) %> ago. - <%= feed.feed_id %></i><br><br>
+      <%= unless feed.content.nil?
+            simple_format(feed.content.gsub('[BREAK]', '<p>'))
+        end %>
+  <% end %>
+
+<br>
+
+<%= link_to 'New Feed', new_feed_path %>
